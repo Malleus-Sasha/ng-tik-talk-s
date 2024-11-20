@@ -4,12 +4,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": [],
-    "paths": {
-      "pages/*": ["./src/app/pages"],
-      "common-ui/*": ["./src/app/common-ui/*"],
-    }
-      
+    "types": []      
   },
   "files": [
     "src/main.ts"

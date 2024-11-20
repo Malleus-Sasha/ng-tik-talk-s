@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ProfileService } from '../../data/http/profile.service';
 import { Profile } from '../../data/interfaces/profile.interface';
 import { ProfileCardComponent } from 'common-ui/profile-card/profile-card.component';
+// import { ProfileCardComponent } from 'common-ui/profile-card/profile-card.component';
 // import { ProfileCardComponent } from "../../common-ui/profile-card/profile-card.component";
 
 @Component({
