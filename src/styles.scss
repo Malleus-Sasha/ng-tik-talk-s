@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'fonts';
+@import 'styles/fonts';
+@import 'styles/text';
+@import 'styles/controls';
+@import 'styles/indents.scss';
+
 
 :root {
   --dark-color: #000000;
   --light-color: #FFFFFF;
   --primary-color: #AE7AFF;
+  --gray-color: #5F646D;
 }
 
 :host {
@@ -42,7 +47,8 @@
 }
 
 body {
-  background-color: var(--dark-color);
+  background: rgb(18,18,18);
+  background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(32,28,31,1) 65%, rgba(58,47,51,1) 75%, rgba(67,50,54,1) 100%);
   color: var(--light-color);
   font-family: 'JetBrains Mono', monospace;
 }
@@ -58,22 +64,4 @@ body {
   margin: 0 4px 4px 0;
 }
 
-.btn {
-  border: none;
-  background: var(--primary-color);
-  color: var(--dark-color);
-  padding: 10px 20px;
-  line-height: 24px;
-  font-size: 14px;
-}
 
-.h6 {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 800;
-}
-
-.subtitle {
-  font-size: 14px;
-  line-height: 21px;
-}

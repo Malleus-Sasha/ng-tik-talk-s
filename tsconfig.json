@@ -24,7 +24,7 @@
       "dom"
     ],
     "paths": {
-      "pages/*": ["./src/app/pages"],
+      "pages/*": ["./src/app/pages/*"],
       "common-ui/*": ["./src/app/common-ui/*"],
     }
   },
