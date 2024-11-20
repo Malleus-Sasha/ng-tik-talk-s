@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'fonts';
+
+:root {
+  --dark-color: #000000;
+  --light-color: #FFFFFF;
+  --primary-color: #AE7AFF;
+}
+
 :host {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
@@ -33,12 +41,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --dark-color: #000000;
-  --light-color: #FFFFFF;
-}
-
 body {
   background-color: var(--dark-color);
   color: var(--light-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.skill-tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--light-color);
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+  display: inline-block;
+  margin: 0 4px 4px 0;
+}
+
+.btn {
+  border: none;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px 20px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 21px;
 }

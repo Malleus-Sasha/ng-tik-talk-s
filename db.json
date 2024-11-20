@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "accounts": [
+    {
+      "id": 1,
+      "username": "ryan.gosling",
+      "avatarUrl": "logo-4.png",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "subscriptionAmount": 47,
+      "firstName": "Ryan",
+      "LastName": "Gosling",
+      "isActive": true,
+      "stack": ["HTML", "CSS"],
+      "city": "Amster"
+    },
+    {
+      "id": 2,
+      "username": "String",
+      "avatarUrl": "logo-3.png",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+      "subscriptionAmount": 47,
+      "firstName": "Ryan Gosling",
+      "LastName": "string",
+      "isActive": true,
+      "stack": ["HTML", "CSS"],
+      "city": "Damster"
+    },
+    {
+      "id": 3,
+      "username": "String",
+      "avatarUrl": "logo-2.png",
+      "description": "Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+      "subscriptionAmount": 57,
+      "firstName": "M Gosling",
+      "LastName": "string",
+      "isActive": true,
+      "stack": ["JS", "HTML", "CSS", "NodeJs", "MongoDB", "React"],
+      "city": "Damster"
+    },
+    {
+      "id": 3,
+      "username": "String",
+      "avatarUrl": "logo-1.png",
+      "description": "Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+      "subscriptionAmount": 57,
+      "firstName": "A Gosling",
+      "LastName": "string",
+      "isActive": true,
+      "stack": ["NodeJs", "MongoDB", "React"],
+      "city": "Damster"
+    }
+  ]
+}

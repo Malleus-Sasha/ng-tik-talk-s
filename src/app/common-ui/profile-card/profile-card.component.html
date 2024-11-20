@@ -1,17 +1,32 @@
-<div class="profile-card">
-  <div class="avatar-name">
-    <img class="profile-card__avatar" src="/assets/images/logo-4.png" alt="ryan">
-    <div class="profile-card__name">
-      <strong>Ryan Gosling</strong>
-      <span>ryan</span>
+@if (profile) {
+  <div class="profile-card">
+    <div class="avatar-name">
+      <img class="profile-card__avatar" 
+        [src]="profile.avatarUrl | imgUrl" 
+        alt="ryan">
+      <div class="profile-card__name">
+        <span class="h6">
+          {{ profile.firstName }}
+          {{ profile.LastName }}
+        </span>
+        <span class="subtitle">{{ profile.username }}</span>
+      </div>
+    </div>
+    <div class="profile-card__description">{{ profile.description }}</div>
+    
+    <div class="profile-card__tags">
+      @for (tag of profile.stack; track tag) {
+        <div class="skill-tag">{{tag}}</div>
+      }
+    </div>
+
+    <div class="action-btns">
+      <button class="btn">Subscribe</button>
     </div>
   </div>
-  <div class="profile-card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.</div>
-  
-  <div class="profile-card__tags">
-    <div class="skill-tag">Angular</div>
-    <div class="skill-tag">HTML</div>
-    <div class="skill-tag">CSS</div>
-    <div class="skill-tag">REST</div>
-  </div>
-</div>
+} @else {
+  <h6>LOADING...........</h6>
+}
+
+
+
