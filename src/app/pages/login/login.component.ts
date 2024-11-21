@@ -1,7 +1,8 @@
-import { AuthService } from './../../services/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Login } from '../../data/interfaces/login';
+import { Router } from '@angular/router';
 interface LoginForm {
   email: FormControl<string>,
   isReg: FormControl<Boolean>,
@@ -17,6 +18,7 @@ interface LoginForm {
 })
 export class LoginComponent {
   authService = inject(AuthService);
+  router = inject(Router);
 
   form = new FormGroup<LoginForm>({
     isReg: new FormControl(false, {nonNullable: true}),
@@ -39,8 +41,9 @@ export class LoginComponent {
     } else {
       console.log(":Login:");
       this.authService.login(this.form.getRawValue()).subscribe({
-        next: (d) => { 
+        next: (d) => {
           console.log('RESPONSE:Login:', d);
+          this.router.navigate(['']);
         },
         error: (e) => {
           console.log('RESPONSE:Login:', e);
