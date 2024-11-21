@@ -1,15 +1,27 @@
-<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+<form class="form" [formGroup]="form" (ngSubmit)="onLogin()">
   <div class="h1">Login</div>
   <label class="control-label mb16">
     <span>Login</span>
     <input class="control-input" type="text" placeholder="Login..." formControlName="username">
   </label>
-  <label class="control-label mb32">
+  <label class="control-label mb16">
+    <span>Email</span>
+    <input class="control-input" type="text" placeholder="Login..." formControlName="email">
+  </label>
+  <label class="control-label mb16">
     <span>Password</span>
     <input class="control-input" type="text" placeholder="Password..." formControlName="password">
   </label>
+  <label class="control-label mb32">
+    <input type="checkbox" formControlName="isReg">
+    <span>Register</span>
+  </label>
   <div class="form-footer">
-    <button class="btn btn-shadow" [disabled]="form.invalid">Login</button>
+    <button class="btn btn-shadow" [disabled]="form.invalid" (ngSubmit)="onLogin()">Login</button>
+    <!-- <button class="btn btn-shadow" [disabled]="form.invalid" (ngSubmit)="onRegister()">Register</button> -->
+  </div>
+  <div>
+    {{ errorReq }}
   </div>
 </form>
 

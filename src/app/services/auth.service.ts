@@ -13,7 +13,14 @@ export class AuthService {
 
   login(payload: Login) {
     return this.http.post(
-      `${this.baseUrl}token`,
+      `${this.baseUrl}login`,
+      payload
+    )
+  }
+
+  register(payload: Login) {
+    return this.http.post(
+      `${this.baseUrl}register`,
       payload
     )
   }

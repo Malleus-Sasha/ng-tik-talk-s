@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "email": "email1@mail",
+      "password": "$2a$10$tyU3ABakYd3WNTVVkC6AmeMIF819pUbzBRgRc.8tCJsQN.AfxEVPC",
+      "isReg": true,
+      "username": "user1",
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "id": 1,
@@ -26,7 +35,10 @@
       "firstName": "Ryan",
       "LastName": "Gosling",
       "isActive": true,
-      "stack": ["HTML", "CSS"],
+      "stack": [
+        "HTML",
+        "CSS"
+      ],
       "city": "Amster"
     },
     {
@@ -38,7 +50,10 @@
       "firstName": "Ryan Gosling",
       "LastName": "string",
       "isActive": true,
-      "stack": ["HTML", "CSS"],
+      "stack": [
+        "HTML",
+        "CSS"
+      ],
       "city": "Damster"
     },
     {
@@ -50,7 +65,14 @@
       "firstName": "M Gosling",
       "LastName": "string",
       "isActive": true,
-      "stack": ["JS", "HTML", "CSS", "NodeJs", "MongoDB", "React"],
+      "stack": [
+        "JS",
+        "HTML",
+        "CSS",
+        "NodeJs",
+        "MongoDB",
+        "React"
+      ],
       "city": "Damster"
     },
     {
@@ -62,7 +84,11 @@
       "firstName": "A Gosling",
       "LastName": "string",
       "isActive": true,
-      "stack": ["NodeJs", "MongoDB", "React"],
+      "stack": [
+        "NodeJs",
+        "MongoDB",
+        "React"
+      ],
       "city": "Damster"
     }
   ]

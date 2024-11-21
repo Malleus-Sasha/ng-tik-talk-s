@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "db": "json-server -w db.json -d 1200"
+    "db": "json-server -w db.json -d 1200",
+    "dba": "json-server-auth -w db.json -d 1200"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,9 @@
     "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",
+    "json-serve": "^0.1.0",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",

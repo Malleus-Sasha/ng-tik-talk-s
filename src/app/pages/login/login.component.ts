@@ -2,8 +2,9 @@ import { AuthService } from './../../services/auth.service';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Login } from '../../data/interfaces/login';
-
 interface LoginForm {
+  email: FormControl<string>,
+  isReg: FormControl<Boolean>,
   username: FormControl<string>,
   password: FormControl<string>,
 }
@@ -18,12 +19,34 @@ export class LoginComponent {
   authService = inject(AuthService);
 
   form = new FormGroup<LoginForm>({
-    username: new FormControl('', {nonNullable: true, validators: [Validators.required, Validators.minLength(4)]}),
-    password: new FormControl('', {nonNullable: true, validators: [Validators.required, Validators.minLength(4)]}),
+    isReg: new FormControl(false, {nonNullable: true}),
+    email: new FormControl('email1@mail', {nonNullable: true, validators: [Validators.required, Validators.minLength(4)]}),
+    username: new FormControl('user1', {nonNullable: true, validators: [Validators.required, Validators.minLength(4)]}),
+    password: new FormControl('1111', {nonNullable: true, validators: [Validators.required, Validators.minLength(4)]}),
   });
 
-  onSubmit() {
+  names = {true: 'Register', false: 'Login'};
+  errorReq = '';
+
+  onLogin() {
     console.log(this.form.getRawValue());
-    this.authService.login(this.form.getRawValue());
+
+    if (this.form.get('isReg')?.getRawValue()) {
+      console.log(":Reg:",this.form.get('isReg'), this.form.value);
+      this.authService.register(this.form.getRawValue()).subscribe(d => {
+        console.log('RESPONSE:Reg:', d)
+      });
+    } else {
+      console.log(":Login:");
+      this.authService.login(this.form.getRawValue()).subscribe({
+        next: (d) => { 
+          console.log('RESPONSE:Login:', d);
+        },
+        error: (e) => {
+          console.log('RESPONSE:Login:', e);
+          this.errorReq = e.error
+        }
+      });    
+    }
   }
 }
