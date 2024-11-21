@@ -1,15 +1,15 @@
-<form class="form" action="">
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="h1">Login</div>
   <label class="control-label mb16">
     <span>Login</span>
-    <input class="control-input" type="text" placeholder="Login...">
+    <input class="control-input" type="text" placeholder="Login..." formControlName="username">
   </label>
   <label class="control-label mb32">
     <span>Password</span>
-    <input class="control-input" type="text" placeholder="Password...">
+    <input class="control-input" type="text" placeholder="Password..." formControlName="password">
   </label>
   <div class="form-footer">
-    <button class="btn btn-shadow">Login</button>
+    <button class="btn btn-shadow" [disabled]="form.invalid">Login</button>
   </div>
 </form>
 
