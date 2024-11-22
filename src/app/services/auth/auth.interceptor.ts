@@ -3,7 +3,7 @@ import { inject } from '@angular/core';
 import { AuthService } from './auth.service';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
-  console.log('REG: ', req);
+  console.log(':Intercept:Auth: ', req);
   const token = inject(AuthService).token;
 
   if (!token) return next(req);
