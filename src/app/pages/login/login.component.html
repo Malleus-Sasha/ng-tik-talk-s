@@ -1,4 +1,4 @@
-<form class="form" [formGroup]="form">  <!-- (ngSubmit)="onLogin()" -->
+<form class="form" [formGroup]="form"(ngSubmit)="onLogin()">
   <div class="h1">Login</div>
   <label class="control-label mb16">
     <span>Login</span>
@@ -17,6 +17,7 @@
         placeholder="Password..." 
         formControlName="password">
       <button class="password-eye-btn" 
+        type="button"
         [class.active]="isPasswordVisible()"
         (click)="isPasswordVisible.set(!isPasswordVisible())">
         <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
