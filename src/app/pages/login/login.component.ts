@@ -1,5 +1,5 @@
 import { AuthService } from '../../services/auth/auth.service';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Login } from '../../data/interfaces/login';
 import { Router } from '@angular/router';
@@ -19,6 +19,7 @@ interface LoginForm {
 export class LoginComponent {
   authService = inject(AuthService);
   router = inject(Router);
+  isPasswordVisible = signal<boolean>(false);
 
   form = new FormGroup<LoginForm>({
     isReg: new FormControl(false, {nonNullable: true}),

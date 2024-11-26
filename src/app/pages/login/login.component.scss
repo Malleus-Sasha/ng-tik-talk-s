@@ -14,3 +14,27 @@
 .form-footer {
   display: grid;
 }
+
+// password
+.password {
+  &-input {
+    position: relative;
+  }
+
+  &-eye-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background: none;
+    border: none;
+    color: #FFFFFFBF;
+    cursor: pointer;
+
+    &.active {
+      color: var(--primary-color);
+    }
+  }
+}
+
