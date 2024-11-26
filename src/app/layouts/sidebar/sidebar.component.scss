@@ -29,6 +29,17 @@
     &:focus-visible {
       background-color: var(--dark-hover-color);
       color: var(--primary-color);
+
+      .svg-icon {
+        color: var(--primary-color);
+      }
     }
   }
+}
+
+.svg-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: var(--light-color);
 }
