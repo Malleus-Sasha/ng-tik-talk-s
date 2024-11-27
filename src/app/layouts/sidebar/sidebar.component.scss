@@ -1,6 +1,7 @@
 :host {
   display: block;
   padding: 20px 12px;
+  background-color: var(--dark-color);
 }
 
 .menu {
@@ -59,4 +60,30 @@
     height: 18px;
     color: inherit;
   }
+}
+
+.sidebar-footer {
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  grid-gap: 12px;
+  align-items: center;
+  padding: 4px 16px;
+  border-radius: 2px;
+  background-color: var(--dark-hover-color);
+}
+
+.footer-ava {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.settings-icon {
+  width: 16px;
+  height: 16px;
 }

@@ -10,7 +10,15 @@ import { Component, Input } from '@angular/core';
 export class SvgIconComponent {
   @Input() icon = '';
   
+  // get href() {
+  //   return `/assets/icons/icons2.svg#${this.icon}`;
+  // }
+
+  // get href() {
+  //   return `/assets/icons/${this.icon}.svg#${this.icon}`;
+  // }
+
   get href() {
-    return `/assets/icons/icons2.svg#${this.icon}`;
+    return `/assets/icons/${this.icon}.svg`;
   }
 }

@@ -1,11 +1,12 @@
 import { Profile } from './../../data/interfaces/profile.interface';
 import { ProfileService } from './../../data/http/profile.service';
 import { AsyncPipe, JsonPipe, NgFor } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SvgIconComponent } from 'common-ui/svg-icon/svg-icon.component';
 import { SubscriberCardComponent } from "../../common-ui/subscriber-card/subscriber-card.component";
 import { ImgUrlPipe } from '../../helpers/img-url.pipe';
+import { firstValueFrom } from 'rxjs';
 
 const MenuItems = [
   { label: 'Home', icon: 'home', link: '' },
@@ -20,11 +21,15 @@ const MenuItems = [
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
   menuItems = MenuItems;
 
   profileService = inject(ProfileService);
-  me$ = this.profileService.getMe();
 
   subscribers$ = this.profileService.getSubscribersShotList();
+  me = this.profileService.me;
+
+  ngOnInit(): void {
+    firstValueFrom(this.profileService.getMe());
+  }
 }

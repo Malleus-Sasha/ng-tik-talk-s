@@ -19,6 +19,23 @@
 
 <div class="mt20 to-subscribers">
   <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text">All subscribers</a>
-  <!-- <svg [href]="'arrow' | imgURl" class="to-subscribers-icon"></svg> -->
+  <svg [attr.href]="'arrow' | imgUrl" class="to-subscribers-icon"></svg>
    <span class="to-subscribers-icon">></span>
 </div>
+
+<footer class="sidebar-footer">
+  
+  @if (me(); as me) {
+    @if (me.avatarUrl) {
+      <img [src]="me.avatarUrl | imgUrl" [alt]="me.firstName" class="footer-ava">
+    } @else { 
+      <img [src]="'ava-t.svg' | imgUrl" alt="ava" class="footer-ava">
+    }
+
+    <div class="medium-text username">{{ me.username }}</div>
+
+    <a [routerLink]="['settings']" class="settings-link">
+      <svg icon="settings" class="settings-icon"></svg>
+    </a>
+  }
+</footer>

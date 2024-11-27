@@ -1,6 +1,5 @@
-import { ProfileService } from './../../data/http/profile.service';
 import { RouterOutlet } from '@angular/router';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from "../sidebar/sidebar.component";
 
 @Component({
@@ -11,11 +10,5 @@ import { SidebarComponent } from "../sidebar/sidebar.component";
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit {
-  profileService = inject(ProfileService);
-
-  ngOnInit(): void {
-    // this.profileService.getMe().subscribe((res) => {
-    //   console.log(res);
-    // })
-  }
+  ngOnInit(): void {  }
 }
