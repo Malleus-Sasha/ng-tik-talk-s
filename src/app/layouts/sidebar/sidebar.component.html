@@ -2,11 +2,23 @@
 
 <nav>
   <ul class="menu">
-    <li>
-      <button class="menu-i">
-        <svg icon="home" class="svg-icon"></svg>
-        <span>Home page</span>
-      </button>
+    <li *ngFor="let item of menuItems">
+      <a class="menu-i" [routerLink]="[item.link]">
+        <svg [icon]="item.icon" class="svg-icon"></svg>
+        <span>{{ item.label }}</span>
+      </a>
     </li>
   </ul>
 </nav>
+
+<div class="medium-text mb20">Subscribers</div>
+
+@for (item of subscribers$ | async; track item.id) {
+  <app-subscriber-card [profile]="item" />
+}
+
+<div class="mt20 to-subscribers">
+  <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text">All subscribers</a>
+  <!-- <svg [href]="'arrow' | imgURl" class="to-subscribers-icon"></svg> -->
+   <span class="to-subscribers-icon">></span>
+</div>

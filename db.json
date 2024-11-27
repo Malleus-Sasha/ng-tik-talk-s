@@ -32,6 +32,21 @@
   "profile": {
     "name": "typicode"
   },
+  "me": {
+    "id": 1,
+    "username": "ryan.gosling",
+    "avatarUrl": "logo-4.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    "subscriptionAmount": 47,
+    "firstName": "Ryan",
+    "LastName": "Gosling",
+    "isActive": true,
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "city": "Amster"
+  },
   "accounts": [
     {
       "id": 1,
@@ -98,5 +113,82 @@
       ],
       "city": "Damster"
     }
-  ]
+  ],
+  "subscribers": {
+      
+      "total": 1111,
+      "page": 1212,
+      "size": 321,
+      "pages": 4321,
+      "items": [
+        {
+          "id": 1,
+          "username": "ryan.gosling",
+          "avatarUrl": "logo-4.png",
+          "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+          "subscriptionAmount": 47,
+          "firstName": "Ryan",
+          "LastName": "Gosling",
+          "isActive": true,
+          "stack": [
+            "HTML",
+            "CSS"
+          ],
+          "city": "Amster"
+        },
+        {
+          "id": 2,
+          "username": "String",
+          "avatarUrl": "logo-3.png",
+          "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+          "subscriptionAmount": 47,
+          "firstName": "Ryan Gosling",
+          "LastName": "string",
+          "isActive": true,
+          "stack": [
+            "HTML",
+            "CSS"
+          ],
+          "city": "Damster"
+        },
+        {
+          "id": 3,
+          "username": "String",
+          "avatarUrl": "logo-2.png",
+          "description": "Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+          "subscriptionAmount": 57,
+          "firstName": "M Gosling",
+          "LastName": "string",
+          "isActive": true,
+          "stack": [
+            "JS",
+            "HTML",
+            "CSS",
+            "NodeJs",
+            "MongoDB",
+            "React"
+          ],
+          "city": "Damster"
+        },
+        {
+          "id": 4,
+          "username": "String",
+          "avatarUrl": "logo-2.png",
+          "description": "Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+          "subscriptionAmount": 57,
+          "firstName": "M Gosling",
+          "LastName": "string",
+          "isActive": true,
+          "stack": [
+            "JS",
+            "HTML",
+            "CSS",
+            "NodeJs",
+            "MongoDB",
+            "React"
+          ],
+          "city": "Damster"
+        }
+      ]
+    }
 }

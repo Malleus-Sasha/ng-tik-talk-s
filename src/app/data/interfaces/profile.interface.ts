@@ -5,7 +5,7 @@ export interface Profile {
   avatarUrl: string | null,
   subscriptionAmount: number,
   firstName: string,
-  LastName: string,
+  lastName: string,
   isActive: boolean,
   stack: string[],
   city: string,
