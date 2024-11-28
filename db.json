@@ -112,6 +112,36 @@
         "React"
       ],
       "city": "Damster"
+    },
+    {
+      "id": 5,
+      "username": "String",
+      "avatarUrl": "logo-3.png",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+      "subscriptionAmount": 47,
+      "firstName": "Ryan Gosling",
+      "LastName": "string",
+      "isActive": true,
+      "stack": [
+        "HTML",
+        "CSS"
+      ],
+      "city": "Damster"
+    },
+    {
+      "id": 6,
+      "username": "String",
+      "avatarUrl": "logo-3.png",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+      "subscriptionAmount": 47,
+      "firstName": "Ryan Gosling",
+      "LastName": "string",
+      "isActive": true,
+      "stack": [
+        "HTML",
+        "CSS"
+      ],
+      "city": "Damster"
     }
   ],
   "subscribers": {
@@ -186,6 +216,36 @@
             "NodeJs",
             "MongoDB",
             "React"
+          ],
+          "city": "Damster"
+        },
+        {
+          "id": 5,
+          "username": "String",
+          "avatarUrl": "logo-3.png",
+          "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+          "subscriptionAmount": 47,
+          "firstName": "Ryan Gosling",
+          "LastName": "string",
+          "isActive": true,
+          "stack": [
+            "HTML",
+            "CSS"
+          ],
+          "city": "Damster"
+        },
+        {
+          "id": 6,
+          "username": "String",
+          "avatarUrl": "logo-3.png",
+          "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cum, tempore nihil error unde maiores ut ex totam fuga qui, ab rem in quis iusto nulla soluta fugit magnam quasi.",
+          "subscriptionAmount": 47,
+          "firstName": "Ryan Gosling",
+          "LastName": "string",
+          "isActive": true,
+          "stack": [
+            "HTML",
+            "CSS"
           ],
           "city": "Damster"
         }

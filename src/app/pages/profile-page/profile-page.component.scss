@@ -1,0 +1,49 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+}
+
+.profile-body {
+  display: grid;
+  grid-gap: 64px;
+  grid-template-columns: 1fr 350px;
+}
+
+.wrap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 6px;
+}
+
+.avatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.btn-search {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  background: var(--light-color);
+}
+
+.stack-wrap {
+  display: flex;
+  gap: 4px;
+}

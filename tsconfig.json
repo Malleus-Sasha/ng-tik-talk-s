@@ -26,6 +26,7 @@
     "paths": {
       "pages/*": ["./src/app/pages/*"],
       "common-ui/*": ["./src/app/common-ui/*"],
+      "interfaces/*": ["./src/app/data/interfaces/*"]
     }
   },
   "angularCompilerOptions": {

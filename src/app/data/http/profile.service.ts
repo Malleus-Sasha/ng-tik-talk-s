@@ -26,11 +26,15 @@ export class ProfileService {
     );
   }
 
-  getSubscribersShotList() {
+  getAccount(id: string) {
+    return this.http.get<Profile>(`${this.url}account/${id}`);
+  }
+
+  getSubscribersShotList(subscribers = 3) {
   // return this.http.get<PageByPage<Profile, number>>(`${this.url}`);
     return this.http.get<Pageable<Profile>>(`${this.url}subscribers`)
       .pipe(
-        map((res) => res.items.slice(0, 3))
+        map((res) => res.items.slice(0, subscribers))
       );
   }
 }
