@@ -3,11 +3,12 @@ import { ProfileService } from './../../data/http/profile.service';
 import { Component, effect, inject, OnInit } from '@angular/core';
 import { ProfileHeaderComponent } from "../../common-ui/profile-header/profile-header.component";
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AvatarUploadComponent } from "../common-ui/avatar-upload/avatar-upload.component";
 
 @Component({
   selector: 'app-settings-page',
   standalone: true,
-  imports: [ProfileHeaderComponent, ReactiveFormsModule],
+  imports: [ProfileHeaderComponent, ReactiveFormsModule, AvatarUploadComponent],
   templateUrl: './settings-page.component.html',
   styleUrl: './settings-page.component.scss'
 })

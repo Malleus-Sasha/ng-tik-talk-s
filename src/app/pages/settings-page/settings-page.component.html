@@ -1,4 +1,3 @@
-<p>settings-page works!</p>
 <app-profile-header/>
 
 <form [formGroup]="form" class="profile-form-wrap" (ngSubmit)="onSave()">  
@@ -22,6 +21,11 @@
     <label class="control-label">
       <span class="control-name">Description</span>
       <textarea formControlName="description" rows="3" class="control-input"></textarea>
+    </label>
+
+    <label class="control-label">
+      <span class="control-name">Description</span>
+      <app-avatar-upload></app-avatar-upload>
     </label>
 
     <label class="control-label">
