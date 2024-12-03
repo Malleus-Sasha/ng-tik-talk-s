@@ -9,7 +9,7 @@ import { ImgUrlPipe } from '../../helpers/img-url.pipe';
 import { firstValueFrom } from 'rxjs';
 
 const MenuItems = [
-  { label: 'Home', icon: 'home', link: '' },
+  { label: 'Home', icon: 'home', link: 'profile/me' },
   { label: 'Chats', icon: 'chats', link: 'chats' },
   { label: 'Search', icon: 'search', link: 'search' },
 ]

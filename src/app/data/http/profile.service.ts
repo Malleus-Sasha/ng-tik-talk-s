@@ -37,4 +37,9 @@ export class ProfileService {
         map((res) => res.items.slice(0, subscribers))
       );
   }
+
+  patchProfile(profile: Partial<Profile>) {
+    console.log('PATCH')
+    return this.http.patch<Profile[]>(`${this.url}accounts/${profile.id}`, profile);
+  }
 }

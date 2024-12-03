@@ -1,0 +1,36 @@
+<p>settings-page works!</p>
+<app-profile-header/>
+
+<form [formGroup]="form" class="profile-form-wrap" (ngSubmit)="onSave()">  
+  <div class="profile-form">
+    <div class="two-columns">
+      <label class="control-label">
+        <span class="control-name">Name</span>
+        <input formControlName="firstName" type="text" class="control-input">
+      </label>
+      <label class="control-label">
+        <span class="control-name">Last name</span>
+        <input formControlName="lastName" type="text" class="control-input">
+      </label>
+    </div>
+
+    <label class="control-label">
+      <span class="control-name">User name</span>
+      <input formControlName="username" type="text" class="control-input">
+    </label>
+
+    <label class="control-label">
+      <span class="control-name">Description</span>
+      <textarea formControlName="description" rows="3" class="control-input"></textarea>
+    </label>
+
+    <label class="control-label">
+      <span class="control-name">Stack</span>
+      <input formControlName="stack" type="text" class="control-input">
+    </label>
+
+    <div>
+      <div><button class="btn">Save</button></div>
+    </div>
+  </div>
+</form>
