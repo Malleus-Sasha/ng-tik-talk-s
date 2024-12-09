@@ -42,4 +42,10 @@ export class ProfileService {
     console.log('PATCH')
     return this.http.patch<Profile[]>(`${this.url}accounts/${profile.id}`, profile);
   }
+
+  uploadAvatar(file: File) {
+    const fd = new FormData();
+    fd.append('image', file);
+    return this.http.post<Profile>(`${this.url}account/upload_image`, fd)
+  }
 }

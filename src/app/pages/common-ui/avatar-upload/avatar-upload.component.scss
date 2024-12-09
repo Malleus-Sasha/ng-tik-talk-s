@@ -27,6 +27,10 @@
     flex-direction: column;
     align-items: center;
   }
+
+  &.fileover {
+    border: 1px dashed tomato;
+  }
 }
 
 .drop-h {
@@ -36,5 +40,6 @@
 }
 
 .upload-icon {
-  font-size: 25px;
+  font-size: 80px;
+  height: 40px;
 }

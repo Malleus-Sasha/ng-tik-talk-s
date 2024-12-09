@@ -1,5 +1,11 @@
 <img [src]="preview()" alt="avatar" class="avatar">
-<div class="dropzone"  tabindex="0" (keyup.enter)="fileDrop.click()">
+<!-- app-dnd -->
+<div appDnd 
+  class="dropzone" 
+  tabindex="0" 
+  (keyup.enter)="fileDrop.click()"
+  (fileDropped)="onFileDropped($event)">
+
   <div class="dropzone-content">
     <div class="upload-icon">&#9729;</div>
     <div class="drop-h">Drag avatar or upload</div>    
@@ -8,6 +14,7 @@
   <input type="file" 
     #fileDrop 
     class="avatar-input" 
+    [(ngModel)] = "avatar"
     (change)="fileBrowserHandler($event)"
     tabindex="-1">
 </div>

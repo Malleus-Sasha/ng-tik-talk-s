@@ -1,6 +1,6 @@
 import { firstValueFrom } from 'rxjs';
 import { ProfileService } from './../../data/http/profile.service';
-import { Component, effect, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, effect, inject, OnInit, ViewChild } from '@angular/core';
 import { ProfileHeaderComponent } from "../../common-ui/profile-header/profile-header.component";
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AvatarUploadComponent } from "../common-ui/avatar-upload/avatar-upload.component";
@@ -12,9 +12,11 @@ import { AvatarUploadComponent } from "../common-ui/avatar-upload/avatar-upload.
   templateUrl: './settings-page.component.html',
   styleUrl: './settings-page.component.scss'
 })
-export class SettingsPageComponent implements OnInit {
+export class SettingsPageComponent implements OnInit, AfterViewInit {
   fb = inject(FormBuilder);
   profileService = inject(ProfileService);
+
+  @ViewChild(AvatarUploadComponent) avatarUpload: any;
 
   form = this.fb.group({
     firstName: ['', Validators.required],
@@ -45,6 +47,10 @@ export class SettingsPageComponent implements OnInit {
       
   }
 
+  ngAfterViewInit(): void {
+    // this.avatarUpload.avatar
+  }
+
   onSave() {
     console.log(':ProfileForm:Save:', this.form.invalid, this.form.value);
     // throw new Error('Method not implemented.');
@@ -53,6 +59,11 @@ export class SettingsPageComponent implements OnInit {
 
     if (this.form.invalid) return;
 
+    if (this.avatarUpload.avatar) {
+      firstValueFrom(this.profileService.uploadAvatar(this.avatarUpload.avatar));
+    }
+
+    console.log('OnSave:', this.avatarUpload.avatar);
 
     // !!! Need idUser
     // @ts-ignore
