@@ -14,6 +14,8 @@ export class ProfileService {
 
   me = signal<Profile | null>(null);
 
+  filteredProfiles = signal<Profile[]>([]);
+
   constructor() { }
 
   getAccounts() {
@@ -46,6 +48,19 @@ export class ProfileService {
   uploadAvatar(file: File) {
     const fd = new FormData();
     fd.append('image', file);
-    return this.http.post<Profile>(`${this.url}account/upload_image`, fd)
+    return this.http.post<Profile>(`${this.url}accounts/upload_image`, fd)
+  }
+
+  filterProfiles(params: Record<string, any>) {
+    console.log(':???:Params?F');
+    // <Pagable<Profile>>
+    return this.http.get<Profile[]>(
+      `${this.url}accounts`,
+      {
+        params
+      }
+    ).pipe(
+      tap((res) => this.filteredProfiles.set(res))
+    );
   }
 }

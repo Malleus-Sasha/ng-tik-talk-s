@@ -1,5 +1,9 @@
+<app-profile-filters>
+
+</app-profile-filters>
 <div class="wrapper">
-  @for (profile of profiles; track profile.id) {
+  <!-- @for (profile of profiles$ | async; track profile.id) -->
+  @for (profile of profilesS(); track profile.id) {
     <app-profile-card [profile]="profile"></app-profile-card>
   }
 </div>

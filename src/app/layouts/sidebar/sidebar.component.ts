@@ -2,7 +2,7 @@ import { Profile } from './../../data/interfaces/profile.interface';
 import { ProfileService } from './../../data/http/profile.service';
 import { AsyncPipe, JsonPipe, NgFor } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { SvgIconComponent } from 'common-ui/svg-icon/svg-icon.component';
 import { SubscriberCardComponent } from "../../common-ui/subscriber-card/subscriber-card.component";
 import { ImgUrlPipe } from '../../helpers/img-url.pipe';
@@ -17,7 +17,7 @@ const MenuItems = [
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [SvgIconComponent, NgFor, RouterLink, SubscriberCardComponent, AsyncPipe, ImgUrlPipe],
+  imports: [SvgIconComponent, NgFor, RouterLink, RouterLinkActive, SubscriberCardComponent, AsyncPipe, ImgUrlPipe],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
